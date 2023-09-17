@@ -205,6 +205,7 @@ def user_stats(df, city):
     print('-'*40)
 
 def display_raw_data(df):
+    """Displays bikeshare raw data."""
     row = 0
     total_rows = len(df)
     while row < total_rows:
