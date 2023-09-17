@@ -14,6 +14,13 @@ MONTH_WN = {"january": 1, "february": 2, "march": 3, "april": 4, "may": 5, "june
 DAY_OF_WEEK_NW = {value: key for key, value in DAY_OF_WEEK_WN.items()}
 MONTH_NW = {value: key for key, value in MONTH_WN.items()}
 
+def time_12h_format(h):
+        if h == 0:
+            print("12 AM")
+        if h > 0 and h < 12:
+            print("{} AM".format(h))
+        else:
+            print("{} PM".format(h-12))
 
 def get_filters():
     """
@@ -102,12 +109,7 @@ def time_stats(df):
     most_common_hour = df['hour'].mode()
     print('The most common hour is:')
     for h in most_common_hour:
-        if h == 0:
-            print("12 AM")
-        if h > 0 and h < 12:
-            print("{} AM".format(h))
-        else:
-            print("{} PM".format(h-12))
+        time_12h_format(h)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
