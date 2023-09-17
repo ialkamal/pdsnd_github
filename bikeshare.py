@@ -169,7 +169,11 @@ def trip_duration_stats(df):
 
 
 def user_stats(df, city):
-    """Displays statistics on bikeshare users."""
+    """Displays statistics on bikeshare users.
+    
+       Function checks if the city is Washington
+       It doesn't have gender or birth year data
+    """
 
     print('\nCalculating User Stats...\n')
     start_time = time.time()
