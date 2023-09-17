@@ -4,10 +4,12 @@
 September 17, 2023
 
 ### Project Title
-Replace the Project Title
+Bikeshare Python Project
 
 ### Description
-Describe what your project is about and what it does
+This project explores data from a bike share system provider for many major cities in the United States, 
+to uncover bike share usage patterns. The script compares the system usage between three large cities: Chicago, New York City, and Washington, DC
+
 
 ### Files used
 Include the files used
