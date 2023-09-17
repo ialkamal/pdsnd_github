@@ -212,6 +212,17 @@ def user_stats(df, city):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
+def display_raw_data(df):
+    row = 0
+    total_rows = len(df)
+    while row < total_rows:
+        raw = input(
+            '\nWould you like to see the raw data? Enter yes or no.\n')
+        print(df.iloc[row:row+5])
+        row += 5
+        if raw.lower() != 'yes':
+            break
+    return
 
 def main():
     while True:
@@ -223,15 +234,7 @@ def main():
         trip_duration_stats(df)
         user_stats(df, city)
 
-        row = 0
-        total_rows = len(df)
-        while row < total_rows:
-            raw = input(
-                '\nWould you like to see the raw data? Enter yes or no.\n')
-            print(df.iloc[row:row+5])
-            row += 5
-            if raw.lower() != 'yes':
-                break
+        display_raw_data(df)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
